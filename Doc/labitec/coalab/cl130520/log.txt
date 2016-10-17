@@ -1,0 +1,114 @@
+ (c)Labitec/HDP 2009. Mon May 20 12:46:35 2013
+ Info 00:00:15,555 ROOT wdog_stop()
+ Info 00:00:17,299 ROOT wdog_stop()
+ Info 12:46:37,484 ROOT start_selftesto_task()
+ Info 12:46:37,487 selftest *** task_selftest() startet
+ Info 12:46:37,488 selftest wdog_start(sec=60.0 sec)
+
+
+### warning ### 20.05.2013 12:46:45:
+###   task 'ROOT': warning 1 in hdp_tool.c, line 2903, cp():
+###   cp() open src '/flash/parimex.txt'
+
+ Info 12:46:45,228 beep *** task_beep() started
+
+
+### warning ### 20.05.2013 12:46:45:
+###   task 'ROOT': warning 1 in could not get file
+from USB-stick
+
+ Info 12:46:47,741 ROOT *** task_paras() started
+
+
+
+********************************************************************************
+********************************************************************************
+********************************************************************************
+**************************** A N A L Y Z E R ***********************************
+* MAC= 00:15:76:00:02:0f
+* mechanics:standard (op=00000001, db=00000000)
+* LED-Fotometer with 3 wavelengths
+* Serno. 'C13300196'
+* Firmware V01.09 / 113723 / 03.09.2012 11:39:58, Rev : 303 $ / (c) Germany
+* customer-code 20157/3840/0/0
+* security-code: lykq,tluj,bsjo,zpnh
+********************************************************************************
+********************************************************************************
+********************************************************************************
+********************************************************************************
+ Info 12:46:57,041 ROOT loading language file '/nfs/language/english' ...
+ Info 12:47:03,822 ROOT succeeded loading language file '/nfs/language/english'
+ Info 12:47:03,823 ROOT  -> lng_anz=1280 (free=220), lng_char_anz=34341 (free=5659)
+
+
+
+### warning ### 20.05.2013 12:47:05:
+###   task 'ROOT': warning 1 in Please always shutdown the software first,
+otherwise data may get lost!
+If last action was AutoCal,
+test-parameters may be corrupted!
+
+ Info 12:47:09,704 stirrer_00 *** task_stirrer(): started
+ Info 12:47:09,706 stirrer_00 *** task_stirrer(): mot_nr=1, stirr_rpm=0, stirr_time=0s, stirr_pause=0s, TACHO=GPI11
+ Info 12:47:10,033 stirrer_01 *** task_stirrer(): started
+ Info 12:47:10,035 stirrer_01 *** task_stirrer(): mot_nr=2, stirr_rpm=0, stirr_time=0s, stirr_pause=0s, TACHO=GPI12
+ Info 12:47:10,279 heiz *** task_heiz() started
+ Info 12:47:29,381 rotor *** task_rotor() started
+ Info 12:47:45,059 ROOT ### liq_check_pumps() entry: z_quick=712, max_z=1650
+ Info 12:47:45,067 ROOT ### Phase 1/3: both pumps:
+ Info 12:47:48,812 dosier *** task_dosier() started
+ Info 12:47:49,111 z_saver *** task_z_saver() started
+ Info 12:48:00,012 ROOT correct level found at 1439
+ Info 12:48:00,013 ROOT ### Phase 2/3: system-pump only:
+ Info 12:48:11,610 ROOT expected level-raise found (pos=1040 is in 712..1389)
+ Info 12:48:11,611 ROOT ### Phase 3/3: waste-pump only:
+ Info 12:48:25,606 ROOT ### liq_check_pumps() expected level-fall found (pos=1359 is in 1090..1650)
+ Info 12:48:26,264 ROOT ### finished without errors
+ Info 12:48:29,533 ROOT   Pumps and level detection test OK
+ Info 12:50:00,180 ROOT korrekter freigabecode 'lykq,tluj,bsjo,zpnh' ist vorhanden.
+ Info 12:54:08,738 ROOT korrekter freigabecode 'lykq,tluj,bsjo,zpnh' ist vorhanden.
+ Info 12:54:11,079 ROOT setup for no internal barcode-scanner
+ Info 12:54:11,093 ROOT scanner_ms1_init() for external BarcodeScanner
+ Info 12:54:35,000 ROOT setup for no internal barcode-scanner
+ Info 12:54:49,781 ROOT build_run(): 1 samples_processed (therefrom 1 fully, 0 partially), 0 samples_failed
+ Info 12:54:49,783 ROOT build_run(): 0 controls_processed (therefrom 0 fully, 0 partially), 0 samples_failed
+ Info 12:54:49,871 ROOT build_run() took 149 ms -----------------------------------
+ Info 12:55:19,992 ROOT wied_init()
+ Info 12:55:22,542 ROOT WASHING before the run. wash_typ=1
+ Info 12:55:50,824 dos_run *** task_dos_run() started
+ Info 12:55:50,826 FOT_RUN *** task_fot_run() started
+ Info 12:55:50,836 dos_run dos start
+ Info 12:55:50,844 FOT_RUN FOT start
+ Info 12:55:50,843 dos_run    0.02s: dos    0: cuv= 29, GET_PROB  , prob_pos=  0, vol=105.0ul, s=   0.00s, d=   5.39s, e=   5.39s, 
+ Info 12:55:56,219 FOT_RUN    5.39s: FOT    0: cuv= 29, ROTO_WAIT , - - - - - - - - - - - - -, s=   5.39s, d=   2.90s, e=   8.29s, 
+ Info 12:55:56,222 dos_run    5.40s: dos    1: cuv= 29, DOS_GO_CUV, - - - - - - - - - - - - -  s=   5.39s, d=   2.00s, e=   7.39s, 
+ Info 12:55:58,219 dos_run    7.39s: dos    2: cuv= 29, PUT_VOL   , - - - - - - - vol=107.0ul, s=   7.39s, d=   1.76s, e=   9.15s, 
+ Info 12:55:59,977 dos_run    9.15s: dos    3: cuv= 29, WASH      , wash_typ=  0, - - - - - -  s=   9.15s, d=   8.60s, e=  17.75s, 
+ Info 12:56:29,977 dos_run   39.15s: dos    4: cuv= 29, GET_REAG  , reag_pos=  7, vol=105.0ul, s=  39.15s, d=   5.32s, e=  44.48s, 
+ Info 12:56:30,302 FOT_RUN   39.48s: FOT    1: cuv= 29, FOT_GO_CUV, meth_nr =  3, - - - - - -, s=  39.48s, d=   5.00s, e=  44.48s, 
+ Info 12:56:35,302 dos_run   44.48s: dos    5: cuv= 29, DOS_GO_CUV, - - - - - - - - - - - - -  s=  44.48s, d=   2.00s, e=  46.48s, 
+ Info 12:56:35,308 FOT_RUN   44.48s: FOT    2: cuv= 29, ROTO_WAIT , - - - - - - - - - - - - -, s=  44.48s, d=   2.90s, e=  47.38s, 
+ Info 12:56:37,302 dos_run   46.48s: dos    6: cuv= 29, PUT_VOL   , - - - - - - - vol=107.0ul, s=  46.48s, d=   1.92s, e=  48.40s, 
+ Info 12:56:37,304 FOT_RUN   46.48s: FOT    3: cuv= 29, MESSEN    , meth_nr =  3, typ=sample , s=  46.48s, d=  25.20s, e=  71.68s, 
+ Info 12:56:37,348 FOT_RUN   46.52s: FOT    4: cuv=  0, FOT_FREI  , - - - - - - - - - - - - -, s=   0.00s, d=   0.00s, e=   0.00s, 
+ Info 12:56:37,350 FOT_RUN FOT_FREI, warte nun auf 'dos_idle=TRUE' und 'mes_busy()=FALSE'
+ Info 12:56:39,224 dos_run   48.40s: dos    7: cuv= 29, WASH      , wash_typ=  1, - - - - - -  s=  48.40s, d=  30.05s, e=  78.45s, 
+ Info 12:57:07,893 dos_run   77.07s: dos    8: cuv=  0, DOS_FREI  , - - - - - - - - - - - - -, s=   0.00s, d=   0.00s, e=   0.00s, 
+ Info 12:57:07,895 dos_run FERTIG! warte nun auf Wiederholer oder endgueltiges Ende
+ Info 12:57:07,908 FOT_RUN Ende des Wartens: interrupted=FALSE, dos_idle=TRUE, mes_busy()=FALSE und run_fot_task=TRUE
+ Info 12:57:07,910 FOT_RUN wied_dispatch(start_of_run= 3254950696 ms)
+ Info 12:57:07,911 FOT_RUN geplante Wiederholer:
+ Info 12:57:07,913 FOT_RUN wied_dispatch() took 0 ms
+ Info 12:57:07,914 FOT_RUN KEINE Messwiederholer => Run beenden
+ Info 12:57:07,917 dos_run KEINE Wiederholer -> Ende
+ Info 12:57:07,919 dos_run   77.09s: dos run finished
+ Info 12:57:07,920 dos_run WASHING after the run. wash_typ=1
+ Info 12:57:08,017 FOT_RUN   77.19s: FOT fertig
+ Info 12:57:38,279 ROOT 
+ Info 12:57:38,284 ROOT SPARE-TIME-STATISTICS OF THE DIFFERENT DILUTOR-TASKS:
+ Info 12:57:38,292 ROOT   PUT_VOL   : anz=     2, mid=   396, mini=   393, maxi=   398 (parameter put_col=   900) [ms]
+ Info 12:57:38,296 ROOT   GET_XXX   : anz=     2, mid=  1056, mini=  1044, maxi=  1069 (parameter get_vol=  2700) [ms]
+ Info 12:57:38,298 ROOT   DOS_GO_CUV: anz=     2, mid=   536, mini=   320, maxi=   753 (parameter drive2cuv=  2000) [ms]
+ Info 12:57:38,300 ROOT   WASH[0]   : anz=     1, mid=   286, mini=   286, maxi=   286 (parameter wash[0]=  6600) [ms]
+ Info 12:57:38,302 ROOT   WASH[1]   : anz=     1, mid=  1385, mini=  1385, maxi=  1385 (parameter wash[1]= 12600) [ms]
+ Info 12:57:38,306 ROOT 

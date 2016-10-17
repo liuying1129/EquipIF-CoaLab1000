@@ -1,0 +1,15 @@
+
+START
+sample_name  ;sample01
+sample_no    ;1
+method_abbrev;PT
+cuvette_no   ;10
+channel_no   ;2
+lamevi_file  ;cl130520/m19a0599.lmv
+State;ok
+date_time;20,05,2013;11:14:28
+clot      ;  13,5 s
+clot-conv1;       90,9 %
+clot-conv2;     1,05 INR
+END
+

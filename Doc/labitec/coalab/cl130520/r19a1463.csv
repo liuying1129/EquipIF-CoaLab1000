@@ -1,0 +1,20 @@
+filename 'r19a1463.csv'
+written at 20,05,2013 12:17:34
+CoaLAB1000          : serial no='C13300196           '
+mainboard           : serial no='M0810228            '
+MAC=00:15:76:00:02:0f
+Software V01,09 built 03,09,2012 11:39:58, Rev : 303 $
+
+protocol of the run
+STAT1          ; TT   ; state:ok
+       date: 20,05,2013; 12:14:44
+@           Clotting  =         none; 
+       smpl: 23; cuv: 25; chan: 1; 
+       file: cl130520/m19a13b9; 
+
+STAT1          ; TT   ; state:ok
+       date: 20,05,2013; 12:16:11
+@           Clotting  =         none; 
+       smpl: 23; cuv: 26; chan: 2; 
+       file: cl130520/m19a1410; 
+

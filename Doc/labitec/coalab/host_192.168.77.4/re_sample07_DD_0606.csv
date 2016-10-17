@@ -1,0 +1,15 @@
+
+START
+sample_name  ;sample07
+sample_no    ;7
+method_abbrev;DD
+cuvette_no   ;7
+channel_no   ;1
+lamevi_file  ;cl140805/m3e0f619.lmv
+State;ok
+date_time;05,08,2014;15:19:48
+grad/diff ;   4,6 mE/min
+korrel    ;   0,532
+kin-conv  ;     177 ug/l
+END
+

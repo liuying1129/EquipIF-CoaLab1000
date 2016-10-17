@@ -1,0 +1,29 @@
+filename '/host_192,168,77,4/test_abrev.txt'
+written at 20,05,2013 12:47:43
+CoaLAB1000          : serial no='C13300196           '
+mainboard           : serial no='M0810228            '
+MAC=00:15:76:00:02:0f
+Software V01,09 built 03,09,2012 11:39:58, Rev : 303 $
+
+START TEST-ABBREVIATIONS:
+PT
+APTT
+Fib
+TT
+DD
+ATIII
+Fib+k
+DD405
+D-Di
+QC-PT
+QCPTT
+C PT
+CaPTT
+CPTi4
+CFibK
+CRP
+FVII
+FVIII
+DDtt
+PT/Fi
+END TEST-ABBREVIATIONS

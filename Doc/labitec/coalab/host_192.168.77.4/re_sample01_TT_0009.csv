@@ -1,0 +1,13 @@
+
+START
+sample_name  ;sample01
+sample_no    ;1
+method_abbrev;TT
+cuvette_no   ;23
+channel_no   ;1
+lamevi_file  ;cl130520/m19a0fed.lmv
+State;ok
+date_time;20,05,2013;11:58:32
+clot      ;  12,4 s
+END
+

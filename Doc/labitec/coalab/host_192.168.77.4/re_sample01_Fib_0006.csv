@@ -1,0 +1,14 @@
+
+START
+sample_name  ;sample01
+sample_no    ;1
+method_abbrev;Fib
+cuvette_no   ;17
+channel_no   ;1
+lamevi_file  ;cl130520/m19a09d5.lmv
+State;       L  
+date_time;20,05,2013;11:32:32
+clot      ;   6,0 s
+clot-conv1;     5,01 g/l
+END
+
