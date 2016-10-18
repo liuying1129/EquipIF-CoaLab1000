@@ -89,6 +89,7 @@ var
   EquipChar:string;
   path_result:string;
 //  big_result:string;
+  ifRecLog:boolean;//是否记录调试日志
 
 //  RFM:STRING;       //返回数据
   hnd:integer;
@@ -147,6 +148,10 @@ begin
   result := result + 'data source=' + datasource + ';';
   result := result + 'Initial Catalog=' + initialcatalog + ';';
   result := result + 'provider=' + 'SQLOLEDB.1' + ';';
+  //Persist Security Info,表示ADO在数据库连接成功后是否保存密码信息
+  //ADO缺省为True,ADO.net缺省为False
+  //程序中会传ADOConnection信息给TADOLYQuery,故设置为True
+  result := result + 'Persist Security Info=True;';
   if ifIntegrated then
     result := result + 'Integrated Security=SSPI;';
 end;
@@ -223,10 +228,11 @@ begin
   ini:=TINIFILE.Create(ChangeFileExt(Application.ExeName,'.ini'));
 
   autorun:=ini.readBool(IniSection,'开机自动运行',false);
+  ifRecLog:=ini.readBool(IniSection,'调试日志',false);
 
   path_result:=ini.ReadString(IniSection,'接口目录','');
 
-  GroupName:=trim(ini.ReadString(IniSection,'组别',''));
+  GroupName:=trim(ini.ReadString(IniSection,'工作组',''));
   EquipChar:=trim(uppercase(ini.ReadString(IniSection,'仪器字母','')));//读出来是大写就万无一失了
   SpecType:=ini.ReadString(IniSection,'默认样本类型','');
   SpecStatus:=ini.ReadString(IniSection,'默认样本状态','');
@@ -302,13 +308,14 @@ begin
   if LoadInputPassDll then
   begin
     ss:='接口目录'+#2+'Dir'+#2+#2+'1'+#2+'注:一般为C:\labietc'+#2+#3+
-      '组别'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
+      '工作组'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '仪器字母'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '检验系统窗体标题'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '默认样本类型'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '默认样本状态'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '组合项目代码'+#2+'Edit'+#2+#2+'1'+#2+#2+#3+
       '开机自动运行'+#2+'CheckListBox'+#2+#2+'1'+#2+#2+#3+
+      '调试日志'+#2+'CheckListBox'+#2+#2+'0'+#2+'注:强烈建议在正常运行时关闭'+#2+#3+
       '高值质控联机号'+#2+'Edit'+#2+#2+'2'+#2+#2+#3+
       '常值质控联机号'+#2+'Edit'+#2+#2+'2'+#2+#2+#3+
       '低值质控联机号'+#2+'Edit'+#2+#2+'2'+#2+#2;
@@ -465,7 +472,7 @@ begin
       (GroupName),(SpecType),(SpecStatus),(EquipChar),
       (CombinID),'',(LisFormCaption),(ConnectString),
       (QuaContSpecNoG),(QuaContSpecNo),(QuaContSpecNoD),'',
-      true,true,YXJB);
+      ifRecLog,true,YXJB);
     if not VarIsEmpty(FInts) then FInts:= unAssigned;
     
     deletefile(filename);//处理完后才删除该文件
