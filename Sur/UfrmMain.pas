@@ -435,7 +435,7 @@ begin
   if uppercase(dlttype)='PT' then
   begin
     ReceiveItemInfo:=VarArrayCreate([0,1],varVariant);
-    ReceiveItemInfo[0]:=VarArrayof([dlttype,dclot,'','']);
+    ReceiveItemInfo[0]:=VarArrayof([dlttype,clot,'','']);
     ReceiveItemInfo[1]:=VarArrayof(['INR',clot_conv2,'','']);
   end else
   if uppercase(dlttype)='FIB' then
